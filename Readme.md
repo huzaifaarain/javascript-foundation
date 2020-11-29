@@ -49,27 +49,26 @@ Low-level languages like C, have manual memory management primitives such as mal
 // Avoid Global Variables as much as possible. e.g
 var a = 1;
 var b = 2;
-/*
-Hypothetically if we keep adding variables, we are adding more and more peieces of memory,  
-and if these where objects and deeply nested objects you can see the memory being used up  
-more and more and more.
-*/
+```
 
+Hypothetically if we keep adding variables, we are adding more and more peieces of memory, and if these where objects and deeply nested objects you can see the memory being used up more and more and more.
+
+```js
 // Event Listeners
 var element = document.getElementById('element');
 element.addEventListener('click',onClick);
-/*
-This is the most common ways to leak memory and that is you add these event listeners and you never remove them when you don't need them so that you keep adding event listeners, and because they're just there in the background you forget about them and the next thing you know you create a memory leak, this happens a lot specially if you go back and forth between single page application
-*/
+```
 
+This is the most common ways to leak memory and that is you add these event listeners and you never remove them when you don't need them so that you keep adding event listeners, and because they're just there in the background you forget about them and the next thing you know you create a memory leak, this happens a lot specially if you go back and forth between single page application
+
+```js
 // setInterval
 setInterval(()=>{
     // referencing objects...
-    /*
-    These objects in here will never be collected by garbage collector because of this set interval unless we clear it and stop it.
-    */
 },time)
 ```
+
+These objects in anonymous function of setInterval will never be collected by garbage collector because of this set interval unless we clear it and stop it.
 
 ## Single Threaded
 
