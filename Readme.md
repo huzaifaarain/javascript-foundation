@@ -50,7 +50,9 @@ Low-level languages like C, have manual memory management primitives such as mal
 var a = 1;
 var b = 2;
 /*
-Hypothetically if we keep adding variables, we are adding more and more peieces of memory, and if these where objects and deeply nested objects you can see the memory being used up more and more and more.
+Hypothetically if we keep adding variables, we are adding more and more peieces of memory,  
+and if these where objects and deeply nested objects you can see the memory being used up  
+more and more and more.
 */
 
 // Event Listeners
